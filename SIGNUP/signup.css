@@ -20,9 +20,7 @@ html, body{
 }
 .container header {
     padding-top:5px;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 33px;
+
 }
 .container form{
     margin: 5px 8px;
@@ -55,7 +53,6 @@ form .field input{
     padding-left: 15px;
     outline: none;
     border-radius: 5px;
-    font-size: 17px;
     transition: all 0.3s;
 }
 form .field input:focus{

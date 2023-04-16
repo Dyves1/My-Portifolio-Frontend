@@ -1,5 +1,7 @@
 const pswrd_1 = document.querySelector("#pswrd_1");
 const pswrd_2 = document.querySelector("#pswrd_2");
+const nameEl = document.querySelector("#name");
+const emailEl = document.querySelector("#email");
 const errorText = document.querySelector(".error-text");
 const btn = document.querySelector("button")
 const showBtn = document.querySelector(".show")
@@ -15,6 +17,24 @@ function active(){
         pswrd_2.setAttribute("disabled","")
     }
     btn.onclick =function(){
+        if(nameEl.value.trim()==''){
+            errorText.style.display ="block";
+            errorText.classList.remove("matched"); 
+            errorText.textContent="Please Enter Your Name";
+            return false     
+        }
+        if(emailEl.value.trim()==''){
+            errorText.style.display ="block";
+            errorText.classList.remove("matched"); 
+            errorText.textContent="Please Enter Your Email";
+            return false     
+        }
+        if(pswrd_1.value.trim()==''){
+            errorText.style.display ="block";
+            errorText.classList.remove("matched"); 
+            errorText.textContent="Please Enter Your Password";
+            return false     
+        }
         if(pswrd_1.value !=pswrd_2.value){
             errorText.style.display ="block";
             errorText.classList.remove("matched"); 
