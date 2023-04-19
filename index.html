@@ -7,6 +7,8 @@
     <script src="https://kit.fontawesome.com/b71c1f0138.js" crossorigin="anonymous"></script>
     <title>Didier Yves Portifolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -122,40 +124,60 @@
 
         </div>
         <h3>Testimonials</h3>
-        <div class="testimonials">
-            <div class="test">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ligula maximus, ullamcorper<br>
-                    odio eget, bibendum odio. Vivamus sodales blandit sapien id cursus. Phasellus porttitor gravida<br>
-                    tortor ut tincidunt. Nulla placerat odio orci, a rhoncus odio ultricies nec. </p>
-                    <div class="test_profile">
-                       <img src="/IMAGE/Didi.jpg" alt="img"> 
-                       <h2>Didier Yves | CEO of PSS Company</h2>
+        <section class="testim" id="testim">
+            <div class="wrap">
+    
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
+    
+                <ul class="dots" id="testim-dots">
+                    <li class="dot active"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
+    
+                <div class="cont" id="testim-content">
+    
+                    <div class="active">
+                        <div class="img"><img src="/IMAGE/Didi.jpg" alt="img"></div>
+                        <h2>Lorem N. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quasi aliquid vel voluptatum
+                            deleniti! Corrupti velit, porro facere facilis laboriosam accusantium, eos beatae maiores.</p>
                     </div>
-            </div>
-            <div class="test">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ligula maximus, ullamcorper<br>
-                    odio eget, bibendum odio. Vivamus sodales blandit sapien id cursus. Phasellus porttitor gravida<br>
-                    tortor ut tincidunt. Nulla placerat odio orci, a rhoncus odio ultricies nec. </p>
-                    <div class="test_profile">
-                       <img src="/IMAGE/Didi.jpg" alt="img"> 
-                       <h2>Didier Yves | CEO of PSS Company</h2>
+                    
+                    <div>
+                        <div class="img"><img src="/IMAGE/Didi.jpg" alt="img"></div>
+                        <h2>Lorem L. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quasi aliquid vel voluptatum
+                            deleniti! Corrupti velit, porro facere facilis laboriosam accusantium, eos beatae maiores.</p>
                     </div>
-            </div>
-            <div class="test">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at ligula maximus, ullamcorper<br>
-                    odio eget, bibendum odio. Vivamus sodales blandit sapien id cursus. Phasellus porttitor gravida<br>
-                    tortor ut tincidunt. Nulla placerat odio orci, a rhoncus odio ultricies nec. </p>
-                    <div class="test_profile">
-                       <img src="/IMAGE/Didi.jpg" alt="img"> 
-                       <h2>Didier Yves | CEO of PSS Company</h2>
+                    
+                    <div>
+                        <div class="img"><img src="/IMAGE/Didi.jpg" alt="img"></div>
+                        <h2>Lorem R. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quasi aliquid vel voluptatum
+                            deleniti! Corrupti velit, porro facere facilis laboriosam accusantium, eos beatae maiores.</p>
                     </div>
+                    
+                    <div>
+                        <div class="img"><img src="/IMAGE/Didi.jpg" alt="img"></div>
+                        <h2>Lorem P. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quasi aliquid vel voluptatum
+                            deleniti! Corrupti velit, porro facere facilis laboriosam accusantium, eos beatae maiores.</p>
+                    </div>
+                    
+                    <div>
+                        <div class="img"><img src="/IMAGE/Didi.jpg" alt="img"></div>
+                        <h2>Lorem Q. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quasi aliquid vel voluptatum
+                            deleniti! Corrupti velit, porro facere facilis laboriosam accusantium, eos beatae maiores.</p>
+                    </div>
+                </div>
+    
             </div>
-
-        </div>
-        <div class="test_arrow">
-            <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        </section>
     </div>
     <div class="blogs" id="blogs">
 
@@ -174,9 +196,32 @@
                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
                      
                      <button><a href="#" class="btn">read more</a></button>
-                     <div class="icons">
-                        <span> <i class="fas fa-calendar"></i> 21st may, 2022 </span>
-                        <span> <i class="fas fa-user"></i> by admin </span>
+                     <div class="blog-icon">
+                        <div class="like-icons">
+                            <button id="like-button">
+                                <i class="far fa-heart"></i>
+                              </button>
+                              <span id="like-count">0</span>
+                         </div>
+                         <div id="message-icon">
+                            <i class="fa-solid fa-comment"></i>
+                            <span id="comment-count">0</span>
+                          </div>
+                          
+                          <!-- Add the comment section, but initially hide it with CSS -->
+                          <div id="comment-section" style="display:none;">
+                            <h2>Comments</h2>
+                            <ul id="comments-list">
+                              <li>
+                                <p class="comment-text">This is the first comment.</p>
+                                <button class="reply-button">Reply</button>
+                              </li>
+                            </ul>
+                            <form id="comment-form">
+                              <textarea id="comment-textarea" placeholder="Add a comment"></textarea>
+                              <button id="comment-submit" type="submit">Submit</button>
+                            </form>
+                          </div>
                      </div>
                   </div>
                </div>
@@ -189,9 +234,32 @@
                      <h3>Web Designing</h3>
                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
                      <button><a href="#" class="btn">read more</a></button>
-                     <div class="icons">
-                        <span> <i class="fas fa-calendar"></i> 21st may, 2022 </span>
-                        <span> <i class="fas fa-user"></i> by admin </span>
+                     <div class="blog-icon">
+                        <div class="like-icons">
+                            <button id="like-button">
+                                <i class="far fa-heart"></i>
+                              </button>
+                              <span id="like-count">0</span>
+                         </div>
+                         <div id="message-icon">
+                            <i class="fa-solid fa-comment"></i>
+                            <span id="comment-count">0</span>
+                          </div>
+                          
+                          <!-- Add the comment section, but initially hide it with CSS -->
+                          <div id="comment-section" style="display:none;">
+                            <h2>Comments</h2>
+                            <ul id="comments-list">
+                              <li>
+                                <p class="comment-text">This is the first comment.</p>
+                                <button class="reply-button">Reply</button>
+                              </li>
+                            </ul>
+                            <form id="comment-form">
+                              <textarea id="comment-textarea" placeholder="Add a comment"></textarea>
+                              <button id="comment-submit" type="submit">Submit</button>
+                            </form>
+                          </div>
                      </div>
                   </div>
                </div>
@@ -204,9 +272,32 @@
                      <h3>Activities</h3>
                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
                      <button><a href="#" class="btn">read more</a></button>
-                     <div class="icons">
-                        <span> <i class="fas fa-calendar"></i> 21st may, 2022 </span>
-                        <span> <i class="fas fa-user"></i> by admin </span>
+                     <div class="blog-icon">
+                        <div class="like-icons">
+                            <button id="like-button">
+                                <i class="far fa-heart"></i>
+                              </button>
+                              <span id="like-count">0</span>
+                         </div>
+                         <div id="message-icon">
+                            <i class="fa-solid fa-comment"></i>
+                            <span id="comment-count">0</span>
+                          </div>
+                          
+                          <!-- Add the comment section, but initially hide it with CSS -->
+                          <div id="comment-section" style="display:none;">
+                            <h2>Comments</h2>
+                            <ul id="comments-list">
+                              <li>
+                                <p class="comment-text">This is the first comment.</p>
+                                <button class="reply-button">Reply</button>
+                              </li>
+                            </ul>
+                            <form id="comment-form">
+                              <textarea id="comment-textarea" placeholder="Add a comment"></textarea>
+                              <button id="comment-submit" type="submit">Submit</button>
+                            </form>
+                          </div>
                      </div>
                   </div>
                </div>
@@ -220,10 +311,33 @@
                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
                    
                    <button><a href="#" class="btn">read more</a></button>
-                   <div class="icons">
-                      <span> <i class="fas fa-calendar"></i> 21st may, 2022 </span>
-                      <span> <i class="fas fa-user"></i> by admin </span>
-                   </div>
+                   <div class="blog-icon">
+                    <div class="like-icons">
+                        <button id="like-button">
+                            <i class="far fa-heart"></i>
+                          </button>
+                          <span id="like-count">0</span>
+                     </div>
+                     <div id="message-icon">
+                        <i class="fa-solid fa-comment"></i>
+                        <span id="comment-count">0</span>
+                      </div>
+                      
+                      <!-- Add the comment section, but initially hide it with CSS -->
+                      <div id="comment-section" style="display:none;">
+                        <h2>Comments</h2>
+                        <ul id="comments-list">
+                          <li>
+                            <p class="comment-text">This is the first comment.</p>
+                            <button class="reply-button">Reply</button>
+                          </li>
+                        </ul>
+                        <form id="comment-form">
+                          <textarea id="comment-textarea" placeholder="Add a comment"></textarea>
+                          <button id="comment-submit" type="submit">Submit</button>
+                        </form>
+                      </div>
+                 </div>
                 </div>
              </div>
        
@@ -235,10 +349,33 @@
                    <h3>Web Designing</h3>
                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
                    <button><a href="#" class="btn">read more</a></button>
-                   <div class="icons">
-                      <span> <i class="fas fa-calendar"></i> 21st may, 2022 </span>
-                      <span> <i class="fas fa-user"></i> by admin </span>
-                   </div>
+                   <div class="blog-icon">
+                    <div class="like-icons">
+                        <button id="like-button">
+                            <i class="far fa-heart"></i>
+                          </button>
+                          <span id="like-count">0</span>
+                     </div>
+                     <div id="message-icon">
+                        <i class="fa-solid fa-comment"></i>
+                        <span id="comment-count">0</span>
+                      </div>
+                      
+                      <!-- Add the comment section, but initially hide it with CSS -->
+                      <div id="comment-section" style="display:none;">
+                        <h2>Comments</h2>
+                        <ul id="comments-list">
+                          <li>
+                            <p class="comment-text">This is the first comment.</p>
+                            <button class="reply-button">Reply</button>
+                          </li>
+                        </ul>
+                        <form id="comment-form">
+                          <textarea id="comment-textarea" placeholder="Add a comment"></textarea>
+                          <button id="comment-submit" type="submit">Submit</button>
+                        </form>
+                      </div>
+                 </div>
                 </div>
              </div>
        
@@ -250,10 +387,33 @@
                    <h3>Activities</h3>
                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!</p>
                    <button><a href="#" class="btn">read more</a></button>
-                   <div class="icons">
-                      <span> <i class="fas fa-calendar"></i> 21st may, 2022 </span>
-                      <span> <i class="fas fa-user"></i> by admin </span>
-                   </div>
+                   <div class="blog-icon">
+                    <div class="like-icons">
+                        <button id="like-button">
+                            <i class="far fa-heart"></i>
+                          </button>
+                          <span id="like-count">0</span>
+                     </div>
+                     <div id="message-icon">
+                        <i class="fa-solid fa-comment"></i>
+                        <span id="comment-count">0</span>
+                      </div>
+                      
+                      <!-- Add the comment section, but initially hide it with CSS -->
+                      <div id="comment-section" style="display:none;">
+                        <h2>Comments</h2>
+                        <ul id="comments-list">
+                          <li>
+                            <p class="comment-text">This is the first comment.</p>
+                            <button class="reply-button">Reply</button>
+                          </li>
+                        </ul>
+                        <form id="comment-form">
+                          <textarea id="comment-textarea" placeholder="Add a comment"></textarea>
+                          <button id="comment-submit" type="submit">Submit</button>
+                        </form>
+                      </div>
+                 </div>
                 </div>
              </div>
 
