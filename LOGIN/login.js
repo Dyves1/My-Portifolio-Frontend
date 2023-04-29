@@ -30,8 +30,11 @@ btn.onclick =function(){
       { return false}
     }
     else{
-        errorText.style.display="block"
-        errorText.classList.add("matched"); 
-        errorText.textContent="Login Successfully";
+        // errorText.style.display="block"
+        // errorText.classList.add("matched"); 
+        // errorText.textContent="Login Successfully";
+        alert("Login Successfully")
+        location.href="../index.html"
+        {return true}
     }
 }
