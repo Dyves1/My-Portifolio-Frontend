@@ -819,3 +819,57 @@ padding-right: 50px;
       line-height: 25px;
   }
 }
+
+
+/* The responsiveness */
+
+/* HOME */
+/* @media only screen and (max-width:800px) {
+
+  .navbar {
+    display: none;
+  }
+  
+  .navbar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    z-index: 1;
+  }
+  
+  .navbar.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .navbar.active li {
+    margin: 10px 0;
+  }
+  
+  .navbar.active a {
+    display: block;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  #menu {
+    font-size: 4vh;
+    margin-right: 90px;
+    color: black;
+    cursor: pointer;
+    display: block;
+  }
+} */
