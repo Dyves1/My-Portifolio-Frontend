@@ -176,26 +176,38 @@ font-style:center ;
     font-size: x-large;
   }
   /* the project within about me */
-  .project{
+  .project {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
-  .project div {
+  
+  .project .item {
     background: #D9D9D9;
     width: 60vh;
+    margin-bottom: 20px; /* Added margin-bottom to create spacing between items */
+    border-radius: 5px; /* Added border-radius to match the style */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Added box-shadow for a subtle effect */
+    overflow: hidden; /* Added overflow to hide overflowing content */
   }
-  .project div img {
-    width:100% ;
+  
+  .project .item img {
+    width: 100%;
     height: 60vh;
+    object-fit: cover;
   }
-  .project div p {
+  
+  .project .item p {
     padding: 20px;
     text-align: center;
+    margin: 0; /* Removed the default margin to have consistent spacing */
   }
-.project div:hover {
-  opacity: 0.7;
-}
+  
+  .project .item:hover {
+    opacity: 0.7;
+  }
+  
 /* the skills page style */
 .my_skills{
   display: flex;
@@ -762,19 +774,38 @@ form  input , textarea{
 footer {
   background: #D9D9D9;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
 }
-.subs{
-  padding: 50px;
+
+.subs {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.subs button , input {
-  padding: 10px ;
+
+.subs input,
+.subs button {
+  padding: 10px;
   border-radius: 5px;
 }
-.allright{
-padding-right: 50px;
+
+.allright {
+  text-align: center;
+  padding-right: 0;
+  flex-basis: 100%;
+}
+
+.contact_media {
+  display: flex;
+  justify-content: center;
+}
+
+.contact_media i {
+  margin: 0 5px;
 }
 
 
